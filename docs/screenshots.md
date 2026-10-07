@@ -17,8 +17,9 @@ python3 tools/privacy_audit.py              # also checks the PNGs carry no meta
 
 `tools/screenshots.mjs` drives headless Chrome over the DevTools protocol. It sets the viewport
 with device emulation (headless Chrome will not size a window under 500px, so a phone shot needs
-emulation, not `--window-size`), switches `prefers-color-scheme` for light and dark, waits for the
-board's first state, and captures full pages. Set `DAYBOOK_CHROME` if Chrome is somewhere unusual.
+emulation, not `--window-size`), switches `prefers-color-scheme` for light and dark, and waits for the
+board's first state. Phone shots are one real screen (390 by 844 at 2x); the board on a laptop
+and `brief-desktop-full.png` are full pages. Set `DAYBOOK_CHROME` if Chrome is somewhere unusual.
 `--only brief` retakes a subset; `--board` and `--brief` point it at other ports.
 
 The demo clock is frozen with `DAYBOOK_NOW`, so the "Now" tile, the time windows and the session
@@ -39,8 +40,8 @@ After a retake, open each PNG and check by eye:
 | file | what |
 |---|---|
 | `board-desktop-light.png`, `board-desktop-dark.png` | the board, all three rooms as one bento grid |
-| `board-phone-{today,agent,fleet}-{light,dark}.png` | each room on a 390px phone |
+| `board-phone-{today,agent,fleet}-{light,dark}.png` | each room on a 390 by 844 phone screen |
 | `board-panel-desktop.png` | the hand-off panel open on the focus item |
 | `brief-desktop-light.png`, `brief-desktop-dark.png` | the top of the brief: masthead, print, headline |
 | `brief-desktop-full.png` | the whole brief, light |
-| `brief-phone-light.png`, `brief-phone-dark.png` | the whole brief on a phone |
+| `brief-phone-light.png`, `brief-phone-dark.png` | the top of the brief on a 390 by 844 phone screen |

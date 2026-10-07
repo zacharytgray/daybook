@@ -25,19 +25,19 @@ const PHONE = { width: 390, height: 844, mobile: true, scale: 2 };
 const SHOTS = [
   ['board-desktop-light', BOARD + '/#today', DESK, 'light', true],
   ['board-desktop-dark', BOARD + '/#today', DESK, 'dark', true],
-  ['board-phone-today-light', BOARD + '/#today', PHONE, 'light', true],
-  ['board-phone-today-dark', BOARD + '/#today', PHONE, 'dark', true],
-  ['board-phone-agent-light', BOARD + '/#agent', PHONE, 'light', true],
-  ['board-phone-agent-dark', BOARD + '/#agent', PHONE, 'dark', true],
-  ['board-phone-fleet-light', BOARD + '/#fleet', PHONE, 'light', true],
-  ['board-phone-fleet-dark', BOARD + '/#fleet', PHONE, 'dark', true],
+  ['board-phone-today-light', BOARD + '/#today', PHONE, 'light', false],
+  ['board-phone-today-dark', BOARD + '/#today', PHONE, 'dark', false],
+  ['board-phone-agent-light', BOARD + '/#agent', PHONE, 'light', false],
+  ['board-phone-agent-dark', BOARD + '/#agent', PHONE, 'dark', false],
+  ['board-phone-fleet-light', BOARD + '/#fleet', PHONE, 'light', false],
+  ['board-phone-fleet-dark', BOARD + '/#fleet', PHONE, 'dark', false],
   ['board-panel-desktop', BOARD + '/#today', DESK, 'light', false,
     "(document.querySelector('.f-acts button, [data-handoff], .rk-btn') || {click(){}}).click()"],
   ['brief-desktop-light', BRIEF, DESK, 'light', false],
   ['brief-desktop-dark', BRIEF, DESK, 'dark', false],
   ['brief-desktop-full', BRIEF, DESK, 'light', true],
-  ['brief-phone-light', BRIEF, PHONE, 'light', true],
-  ['brief-phone-dark', BRIEF, PHONE, 'dark', true],
+  ['brief-phone-light', BRIEF, PHONE, 'light', false],
+  ['brief-phone-dark', BRIEF, PHONE, 'dark', false],
 ];
 
 const prof = mkdtempSync(join(tmpdir(), 'daybook-shots-'));

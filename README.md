@@ -12,13 +12,17 @@ and the machines they run on. Mark a to-do done and tomorrow's brief skips it. H
 agent and it gets suggested settings (which runner, which folder, how far it may go) and a note
 box.
 
-![The board on a desktop, light mode, with invented demo data](docs/screenshots/board-desktop-light.png)
+![The board on a laptop: the day's sky and clock, what needs you, the day's numbers, the focus, ranked to-dos, the timeline, agent sessions and the fleet](docs/screenshots/board-desktop-light.png)
 
-<p>
-<img src="docs/screenshots/brief-phone-light.png" alt="The brief on a phone, light mode" width="250">
-<img src="docs/screenshots/board-phone-agent-dark.png" alt="The agent room on a phone, dark mode" width="250">
-<img src="docs/screenshots/brief-desktop-dark.png" alt="The top of the brief on a desktop, dark mode" width="330">
-</p>
+The brief, top of the page. The print is drawn from the day's calendar and forecast:
+
+![The top of the morning brief on a laptop: masthead, the generated print of the day, headline and opening](docs/screenshots/brief-desktop-light.png)
+
+Handing a to-do to the agent, with suggested runner, folder and reach:
+
+![The hand-off panel open on the focus item](docs/screenshots/board-panel-desktop.png)
+
+<img src="docs/screenshots/brief-phone-light.png" alt="The brief on a phone" width="300">
 
 Every name, class, event and message in these screenshots is invented. They are captures of the
 demo below.
