@@ -1,0 +1,6 @@
+# invented test device
+hostname = "test-hub"
+role = "hub"
+ip = "127.0.0.1"
+ssh_user = "tester"
+tmux = "/usr/bin/tmux"

@@ -1,0 +1,5 @@
+# invented demo data. no ssh_user, so its sessions get no attach line
+hostname = "notebook"
+role = "laptop"
+ip = "192.0.2.11"
+assume_up = true

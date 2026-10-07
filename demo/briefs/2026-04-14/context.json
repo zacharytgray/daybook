@@ -1,0 +1,336 @@
+{
+ "school": {
+  "date": "2026-04-14",
+  "class_meetings": [
+   {
+    "day": "today",
+    "class": "CS-1300",
+    "name": "Intro to Programming",
+    "role": "ta",
+    "time": "1 PM - 2:15 PM",
+    "start": "13:00",
+    "end": "14:15"
+   },
+   {
+    "day": "tomorrow",
+    "class": "HIST-2210",
+    "name": "Maps and Empires",
+    "role": "student",
+    "time": "9 AM - 10:15 AM",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "today",
+    "class": "STAT-3100",
+    "name": "Applied Statistics",
+    "role": "student",
+    "time": "10:30 AM - 11:45 AM",
+    "start": "10:30",
+    "end": "11:45"
+   }
+  ],
+  "due_soon": [
+   {
+    "class": "HIST-2210",
+    "title": "Response paper 4: Portolan charts",
+    "overdue": false,
+    "sort": "2026-04-15T09:00:00-06:00",
+    "due": "Wed Apr 15, 9 AM"
+   },
+   {
+    "class": "STAT-3100",
+    "title": "Homework 7: Logistic Regression",
+    "overdue": false,
+    "sort": "2026-04-15T23:59:00-06:00",
+    "due": "Wed Apr 15, 11:59 PM"
+   },
+   {
+    "class": "STAT-3100",
+    "title": "Project proposal",
+    "overdue": false,
+    "sort": "2026-04-21T23:59:00-06:00",
+    "due": "Tue Apr 21, 11:59 PM"
+   },
+   {
+    "class": "HIST-2210",
+    "title": "Midterm essay outline",
+    "overdue": false,
+    "sort": "2026-04-24T23:59:00-06:00",
+    "due": "Fri Apr 24"
+   }
+  ],
+  "to_grade": [
+   {
+    "class": "CS-1300",
+    "title": "Grade Lab 8 for section 2",
+    "overdue": false,
+    "sort": "2026-04-15T23:59:00-06:00",
+    "due": "Wed Apr 15",
+    "kind": "grading"
+   },
+   {
+    "class": "CS-1300",
+    "title": "Lab 9: Lists and loops",
+    "overdue": false,
+    "sort": "2026-04-16T23:59:00-06:00",
+    "due": "Thu Apr 16, 11:59 PM",
+    "kind": "students_due"
+   }
+  ],
+  "ta_grading_done": [
+   {
+    "class": "CS-1300",
+    "title": "Grade Lab 7 for section 2",
+    "status": "graded",
+    "due": "2026-04-08",
+    "file": "cs-1300/grade-lab-7.md"
+   }
+  ],
+  "ta_cutoffs_closed": [],
+  "decisions_owed": [
+   "2026-04-13: Late lab request from a student in section 2"
+  ],
+  "recent_lectures": [
+   {
+    "class": "HIST-2210",
+    "date": "2026-04-13",
+    "title": "Portolan charts and the sailors who used them",
+    "topics": "portolan charts, compass roses, rhumb lines",
+    "summary": "Charts drawn for sailors, not rulers. Why the coastlines are precise and the inland parts are empty.\nThe web of rhumb lines came from compass bearings, not latitude and longitude."
+   }
+  ],
+  "todoist_task_ids": [],
+  "office_hours": [
+   {
+    "class": "CS-1300",
+    "text": "Tuesdays 15:00-16:00 in the lab, room 104. Thursdays online by appointment."
+   }
+  ],
+  "workdirs": {},
+  "problems": []
+ },
+ "prs": [
+  {
+   "repository": {
+    "nameWithOwner": "avery-example/trailmix"
+   },
+   "number": 12,
+   "title": "Cache map tiles between runs",
+   "url": "https://example.com/avery-example/trailmix/pull/12",
+   "isDraft": false,
+   "updatedAt": "2026-04-13T21:40:00Z",
+   "reviewDecision": "REVIEW_REQUIRED",
+   "mergeable": "MERGEABLE",
+   "checks": "passing"
+  },
+  {
+   "repository": {
+    "nameWithOwner": "avery-example/postcard-press"
+   },
+   "number": 4,
+   "title": "Use the new serif for captions",
+   "url": "https://example.com/avery-example/postcard-press/pull/4",
+   "isDraft": true,
+   "updatedAt": "2026-04-14T07:55:00Z",
+   "reviewDecision": "",
+   "mergeable": "MERGEABLE",
+   "checks": "pending"
+  }
+ ],
+ "projects": {
+  "reports": [
+   {
+    "name": "hd-garden-sensor-calibration",
+    "updated": "2026-04-14T07:10-06:00",
+    "text": "Calibrated the moisture probe against the three soil samples. Dry soil now reads 12 percent, wet soil 41 percent.\n\nLeft for you:\n1. Pick the alert threshold: 20 or 25 percent."
+   },
+   {
+    "name": "hd-postcard-press-fonts",
+    "updated": "2026-04-14T08:10-06:00",
+    "text": "Swapped the caption font and fixed the line breaks on narrow cards. Draft PR open.\n\nLeft for you:\n1. Look at the two sample cards and say which spacing reads better."
+   }
+  ],
+  "sessions": [
+   {
+    "name": "hd-garden-sensor-calibration",
+    "status": "busy"
+   },
+   {
+    "name": "hd-trailmix-map-tiles",
+    "status": "waiting"
+   }
+  ],
+  "git": [
+   {
+    "repo": "garden-sensor",
+    "commits": [
+     "Add a calibration table for three soil types",
+     "Log readings every ten minutes"
+    ]
+   },
+   {
+    "repo": "postcard-press",
+    "commits": [
+     "Wrap captions at word boundaries",
+     "Try the new caption serif"
+    ]
+   },
+   {
+    "repo": "trailmix",
+    "commits": [
+     "Cache rendered tiles on disk"
+    ]
+   }
+  ]
+ },
+ "mail": {
+  "status": "off",
+  "items": [],
+  "note": "no second mailbox set"
+ },
+ "news": {
+  "status": "ok",
+  "feeds_ok": 3,
+  "feeds": 3,
+  "items": [
+   {
+    "source": "Example Lab blog",
+    "title": "A small open-weight model for on-device summaries",
+    "url": "https://example.com/lab/small-summary-model",
+    "published": "2026-04-13",
+    "summary": "A 3B model tuned for summaries, released with weights and a model card."
+   },
+   {
+    "source": "Example Preprints",
+    "title": "Agents that ask before they act",
+    "url": "https://example.com/preprints/ask-before-act",
+    "published": "2026-04-13",
+    "summary": "A study of agents that pause for a yes before any change to files or mail."
+   },
+   {
+    "source": "Example Runtime releases",
+    "title": "v2.4.0",
+    "kind": "release",
+    "url": "https://example.com/runtime/releases/v2.4.0",
+    "published": "2026-04-14",
+    "summary": "Faster model loading on laptops and a new low-memory mode."
+   }
+  ]
+ },
+ "weather": {
+  "status": "ok",
+  "line": "Partly sunny, 64 / 41",
+  "today": "Partly sunny, with a high near 64. Light west wind.",
+  "tonight": "Mostly clear, with a low around 41.",
+  "tomorrow": "Sunny, high 68",
+  "hourly": [
+   {
+    "h": 6,
+    "t": 42,
+    "pop": 0,
+    "sky": "Sunny"
+   },
+   {
+    "h": 7,
+    "t": 44,
+    "pop": 0,
+    "sky": "Sunny"
+   },
+   {
+    "h": 8,
+    "t": 47,
+    "pop": 0,
+    "sky": "Sunny"
+   },
+   {
+    "h": 9,
+    "t": 51,
+    "pop": 0,
+    "sky": "Sunny"
+   },
+   {
+    "h": 10,
+    "t": 54,
+    "pop": 0,
+    "sky": "Sunny"
+   },
+   {
+    "h": 11,
+    "t": 57,
+    "pop": 0,
+    "sky": "Sunny"
+   },
+   {
+    "h": 12,
+    "t": 60,
+    "pop": 0,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 13,
+    "t": 62,
+    "pop": 0,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 14,
+    "t": 63,
+    "pop": 0,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 15,
+    "t": 64,
+    "pop": 10,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 16,
+    "t": 63,
+    "pop": 10,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 17,
+    "t": 61,
+    "pop": 10,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 18,
+    "t": 58,
+    "pop": 10,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 19,
+    "t": 55,
+    "pop": 10,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 20,
+    "t": 51,
+    "pop": 10,
+    "sky": "Partly Sunny"
+   },
+   {
+    "h": 21,
+    "t": 48,
+    "pop": 10,
+    "sky": "Partly Sunny"
+   }
+  ],
+  "note": "invented demo forecast"
+ },
+ "marks": {
+  "status": "none",
+  "items": [],
+  "note": "no marks file"
+ },
+ "gathered_at": "2026-04-14T07:30:00-06:00",
+ "off": [
+  "mail"
+ ]
+}

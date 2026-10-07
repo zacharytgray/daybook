@@ -1,0 +1,5 @@
+{
+ "claude": [{"id": "opus", "label": "Opus", "default": true}, {"id": "sonnet", "label": "Sonnet"}, {"id": "haiku", "label": "Haiku"}],
+ "codex": [{"id": "gpt-5-codex", "label": "GPT-5 Codex", "default": true}, {"id": "gpt-5-mini", "label": "GPT-5 Mini"},
+           {"id": "Bad Id!", "label": "dropped"}, "not a row"]
+}

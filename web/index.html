@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1016" media="(prefers-color-scheme: dark)">
+<meta name="daybook-token" content="{{token}}">
+<title>{{title}}</title>
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/app.css">
+<script src="/app.js" defer></script>
+<!--modules-->
+</head>
+<body data-room="today">
+<a class="skip" href="#main">Skip to the board</a>
+<header class="mast">
+  <div class="mast-in">
+    <h1 class="brand" id="brand">{{title}}</h1>
+    <div class="mast-meta">
+      <span class="live" id="live" role="status" aria-live="polite"><span class="live-dot" aria-hidden="true"></span><span class="live-text">Connecting</span></span>
+      <p class="almanac" id="almanac"></p>
+    </div>
+    <a class="btn pill brief-link" id="brief-link" hidden></a>
+  </div>
+</header>
+<main class="board" id="main" tabindex="-1"></main>
+<nav class="tabs" id="tabs" aria-label="Rooms">
+  <button type="button" data-tab="today" aria-current="page"><span class="tab-ic" id="tab-ic-today"></span><span class="tab-name">Today</span></button>
+  <button type="button" data-tab="agent"><span class="tab-ic" id="tab-ic-agent"><span class="tab-badge" id="tab-badge" aria-hidden="true" hidden></span></span><span class="tab-name" id="tab-name-agent">{{agent}}</span></button>
+  <button type="button" data-tab="fleet"><span class="tab-ic" id="tab-ic-fleet"><span class="tab-dot" id="tab-dot" aria-hidden="true" hidden></span></span><span class="tab-name">Fleet</span></button>
+</nav>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden></aside>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<noscript><p class="nojs">The board needs JavaScript to draw the day.</p></noscript>
+</body>
+</html>

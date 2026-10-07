@@ -1,0 +1,5 @@
+# one file per machine. 192.0.2.0/24 is a documentation range; use your own addresses.
+hostname = "desk"
+role = "hub"
+ip = "192.0.2.10"
+ssh_user = "you"

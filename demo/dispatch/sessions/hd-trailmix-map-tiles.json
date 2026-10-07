@@ -1,0 +1,15 @@
+{
+ "note": "invented demo data",
+ "name": "hd-trailmix-map-tiles",
+ "task": "Avery asks: cache the trail map tiles in trailmix so the app works offline at the trailhead",
+ "repo": "trailmix",
+ "branch": "offline-tiles",
+ "cwd": "~/projects/trailmix",
+ "host": "laptop",
+ "backend": "codex",
+ "model": "gpt-5-codex",
+ "status": "waiting",
+ "waiting_for": "permission",
+ "started_at": 1776177600,
+ "url": ""
+}

@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+"""daybook: a morning brief and a live day board.
+
+  daybook demo [--fresh] [--no-serve] [--port P] [--brief-port P]
+                                  render the invented demo day and serve both pages on localhost
+  daybook brief <cmd> ...         generate | render | deliver | serve | status   (daybook brief -h)
+  daybook board <cmd> ...         serve | state | digest                         (daybook board -h)
+  daybook config                  print the settings in effect (secrets shown only as set or empty)
+"""
+import os
+import shutil
+import sys
+import threading
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+DEMO = ROOT / "demo"
+DEMO_DATE = "2026-04-14"
+SECRET = ("SECRET", "TOKEN", "SMS", "WEBHOOK_URL")
+
+
+def demo_env():
+    """the demo ignores your own settings: every daybook and todoist variable is cleared, then demo.env loads."""
+    for k in list(os.environ):
+        if k.startswith("DAYBOOK_") or k.startswith("TODOIST_"):
+            del os.environ[k]
+    os.environ["DAYBOOK_ENV_FILE"] = str(DEMO / "demo.env")
+    from daybook import config
+    config.load_env()
+
+
+def demo(args):
+    import argparse
+    ap = argparse.ArgumentParser(prog="daybook demo")
+    ap.add_argument("--fresh", action="store_true", help="wipe demo/.data first (marks, requests, rendered pages)")
+    ap.add_argument("--no-serve", action="store_true", help="render the demo brief and exit")
+    ap.add_argument("--port", type=int, default=8740)
+    ap.add_argument("--brief-port", type=int, default=8735)
+    a = ap.parse_args(args)
+    demo_env()
+    os.environ["DAYBOOK_BOARD_PORT"], os.environ["DAYBOOK_BRIEF_PORT"] = str(a.port), str(a.brief_port)
+    from daybook import brief, config
+    data = config.path("DAYBOOK_DATA")
+    if a.fresh and data.exists():
+        shutil.rmtree(data)
+    briefs = config.path("DAYBOOK_BRIEFS")
+    src = DEMO / "briefs" / DEMO_DATE
+    dst = briefs / DEMO_DATE
+    dst.mkdir(parents=True, exist_ok=True)
+    for f in ("brief.json", "context.json"):
+        shutil.copyfile(src / f, dst / f)
+    brief.main(["render", "--date", DEMO_DATE])
+    print(f"demo brief: {dst / 'brief.html'}", file=sys.stderr)
+    if a.no_serve:
+        return 0
+    from daybook.board import server
+    host = config.setting("DAYBOOK_HOST")
+    bsrv = brief.make_server(host, a.brief_port)
+    threading.Thread(target=bsrv.serve_forever, daemon=True, name="brief").start()
+    print(f"brief on http://{host}:{a.brief_port}/", file=sys.stderr)
+    server.serve(host, a.port)
+    return 0
+
+
+def show_config():
+    from daybook import config
+    config.load_env()
+    for k in config.DEFAULTS:
+        v = config.setting(k)
+        if any(s in k for s in SECRET):
+            v = "(set)" if v else "(empty)"
+        print(f"{k}={v}")
+    return 0
+
+
+def main(argv):
+    if not argv or argv[0] in ("-h", "--help"):
+        print(__doc__.strip())
+        return 0
+    cmd, rest = argv[0], argv[1:]
+    if cmd == "demo":
+        return demo(rest)
+    if cmd == "config":
+        return show_config()
+    if cmd == "brief":
+        from daybook import brief
+        return brief.main(rest) or 0
+    if cmd == "board":
+        from daybook.board import cli
+        return cli.main(rest) or 0
+    print(f"unknown command {cmd}; try daybook --help", file=sys.stderr)
+    return 2
+
+
+if __name__ == "__main__":
+    try:
+        sys.exit(main(sys.argv[1:]))
+    except KeyboardInterrupt:
+        sys.exit(0)

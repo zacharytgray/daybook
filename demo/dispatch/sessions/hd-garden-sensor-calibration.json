@@ -1,0 +1,15 @@
+{
+ "note": "invented demo data",
+ "name": "hd-garden-sensor-calibration",
+ "task": "Avery asks: recalibrate the soil moisture readings in garden-sensor so dry soil stops reading as damp",
+ "repo": "garden-sensor",
+ "branch": "calibrate-moisture",
+ "cwd": "~/projects/garden-sensor",
+ "host": "hub",
+ "backend": "claude",
+ "model": "opus",
+ "status": "busy",
+ "waiting_for": "",
+ "started_at": 1776179100,
+ "url": ""
+}

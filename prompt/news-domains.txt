@@ -1,0 +1,8 @@
+www.anthropic.com anthropic.com code.claude.com platform.claude.com docs.claude.com status.claude.com
+openai.com developers.openai.com learn.chatgpt.com
+deepmind.google blog.google developers.googleblog.com ai.google.dev
+ai.meta.com about.fb.com mistral.ai docs.mistral.ai huggingface.co api-docs.deepseek.com
+ollama.com lmstudio.ai vllm.ai machinelearning.apple.com developer.nvidia.com
+github.com raw.githubusercontent.com github.blog arxiv.org
+simonwillison.net www.latent.space importai.substack.com www.interconnects.ai
+techcrunch.com www.theverge.com arstechnica.com reflection.ai

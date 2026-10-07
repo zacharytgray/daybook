@@ -1,0 +1,9 @@
+{
+ "checked_at": "2026-03-03T08:55:00-07:00",
+ "services": [
+  {"label": "web", "verdict": "ok", "issues": []},
+  {"label": "backup", "verdict": "drift", "issues": [{"status": "open", "summary": "Last run was two days ago, see https://example.com/log"}]},
+  {"label": "queue", "verdict": "down", "issues": [{"status": "open", "summary": "Not answering."}]},
+  {"label": "old-thing", "verdict": "ok", "status": "retired", "issues": []}
+ ]
+}

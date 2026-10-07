@@ -1,0 +1,7 @@
+# invented demo data. 192.0.2.0/24 is a documentation range; nothing here is a real machine
+hostname = "desk"
+role = "hub"
+ip = "192.0.2.10"
+ssh_user = "avery"
+tmux = "/usr/local/bin/tmux"
+assume_up = true

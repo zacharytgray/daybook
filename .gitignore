@@ -1,0 +1,11 @@
+# your own data never goes in git
+/data/
+/briefs/
+.env
+.env.*
+!.env.example
+prompt/about.md
+demo/.data/
+__pycache__/
+*.pyc
+.DS_Store

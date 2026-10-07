@@ -1,0 +1,22 @@
+{
+ "headline": "A test day: one writing block and a check-in.",
+ "opening": "The morning is open, so the methods section gets it.",
+ "focus": {"title": "Draft the methods section", "why": "The draft is due Friday.", "when": "8-11 AM", "source": "session report hd-methods"},
+ "next_actions": [
+  {"title": "Draft the methods section", "why": "dup of the focus", "when": "8 AM", "horizon": "today", "kind": "research", "source": "x", "url": ""},
+  {"title": "Call the bike shop back", "why": "They called Monday.", "when": "Noon", "horizon": "today", "kind": "personal", "source": "voicemail", "url": ""},
+  {"title": "Review the kite-app layout PR", "why": "It has been open two days.", "when": "2 PM", "horizon": "today", "kind": "pr", "source": "forge", "url": "https://example.com/tester/kite-app/pull/3"},
+  {"title": "Finish BIO-2100 lab report 4", "why": "Due Thursday.", "when": "Tonight", "horizon": "today", "kind": "school", "source": "school", "url": ""},
+  {"title": "Wire board marks into the brief", "why": "So done things stay done.", "when": "This week", "horizon": "this_week", "kind": "project", "source": "plan", "url": "",
+   "handoff": {"runner": "codex", "model": "gpt-5-codex", "where": "~/somewhere-else/notes-site", "reach": "branch", "prompt": "read the plan first"}}
+ ],
+ "events": [
+  {"start": "11:00", "end": "12:00", "title": "Advisor check-in", "where": "Video call", "kind": "meeting", "source": "calendar", "detail": "", "url": "javascript:alert(1)"}
+ ],
+ "tomorrow": "Wednesday is quiet.",
+ "todoist_schedule": [
+  {"id": "T1", "title": "BIO-2100 lab report 4", "sentence": "mirrors a school file"},
+  {"id": "T2", "title": "Renew the library card", "sentence": "Due this month."}
+ ],
+ "weather_line": "Clear, 57 / 33"
+}

@@ -1,0 +1,13 @@
+{
+ "note": "invented demo data",
+ "checked_at": "2026-04-14T10:15:00-06:00",
+ "services": [
+  {"label": "board-web", "verdict": "ok", "issues": []},
+  {"label": "brief-web", "verdict": "ok", "issues": []},
+  {"label": "nightly-backup", "verdict": "drift", "issues": [
+   {"status": "open", "summary": "The last backup finished two days ago. It usually runs every night."}]},
+  {"label": "photo-sync", "verdict": "ok", "issues": []},
+  {"label": "garden-sensor-ingest", "verdict": "ok", "issues": [
+   {"status": "closed", "summary": "Restarted after a power blip last week."}]}
+ ]
+}

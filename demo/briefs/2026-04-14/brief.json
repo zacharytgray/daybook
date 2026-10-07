@@ -1,0 +1,269 @@
+{
+ "headline": "Teaching at one, grading after four, and a paper due before Wednesday's class.",
+ "opening": "Most of the day is spoken for until office hours end at four. The evening is the real work time, so keep it for Lab 8 and the response paper.",
+ "focus": {
+  "title": "Finish grading Lab 8 for section 2",
+  "why": "Grades are due Wednesday and one student is waiting on a regrade answer.",
+  "when": "4-6 PM, after office hours",
+  "source": "school folder"
+ },
+ "next_actions": [
+  {
+   "title": "Finish response paper 4 on portolan charts",
+   "why": "It is due at the start of Wednesday's 9 AM class.",
+   "when": "8-9 AM, or tonight after grading",
+   "horizon": "today",
+   "kind": "school",
+   "source": "school folder",
+   "url": "",
+   "handoff": {
+    "runner": "agent",
+    "model": "default",
+    "where": "",
+    "reach": "draft",
+    "prompt": "Pull my notes from Monday's lecture into a two page outline."
+   }
+  },
+  {
+   "title": "Reply to Sam about the sensor parts",
+   "why": "The parts order closes tonight and Sam needs a shipping address.",
+   "when": "9:45-10:30 AM",
+   "horizon": "today",
+   "kind": "email",
+   "source": "Gmail",
+   "url": "https://example.com/mail/thread/sensor-parts",
+   "handoff": {
+    "runner": "agent",
+    "model": "default",
+    "where": "",
+    "reach": "draft",
+    "prompt": "Draft a short reply to Sam saying the probes should ship to the garden shed."
+   }
+  },
+  {
+   "title": "Answer the Lab 8 regrade request",
+   "why": "A student in section 2 asked on Monday and the syllabus promises a reply in two days.",
+   "when": "Before office hours",
+   "horizon": "today",
+   "kind": "ta",
+   "source": "school folder",
+   "url": "",
+   "handoff": {
+    "runner": "agent",
+    "model": "default",
+    "where": "",
+    "reach": "draft",
+    "prompt": "Draft a kind reply that explains the regrade steps."
+   }
+  },
+  {
+   "title": "Review the trail map tiles PR",
+   "why": "Checks pass and it only needs a look before merging.",
+   "when": "Wednesday afternoon",
+   "horizon": "this_week",
+   "kind": "pr",
+   "source": "GitHub",
+   "url": "https://example.com/avery-example/trailmix/pull/12",
+   "handoff": {
+    "runner": "claude",
+    "model": "default",
+    "where": "",
+    "reach": "branch",
+    "prompt": "Read PR 12 and list anything that would break offline use."
+   }
+  },
+  {
+   "title": "Outline the Applied Statistics project proposal",
+   "why": "One page is due next Tuesday and the data question is still open.",
+   "when": "Thursday morning",
+   "horizon": "this_week",
+   "kind": "school",
+   "source": "school folder",
+   "url": "",
+   "handoff": {
+    "runner": "claude",
+    "model": "default",
+    "where": "",
+    "reach": "draft",
+    "prompt": "List three public datasets that fit a logistic regression project."
+   }
+  }
+ ],
+ "events": [
+  {
+   "start": "09:00",
+   "end": "09:45",
+   "title": "Advisor check-in",
+   "where": "Hall B, room 212",
+   "kind": "meeting",
+   "source": "Google Calendar",
+   "detail": "Bring the project proposal question and one dataset idea.",
+   "url": ""
+  },
+  {
+   "start": "10:30",
+   "end": "11:45",
+   "title": "STAT 3100 Applied Statistics",
+   "where": "Science Center 140",
+   "kind": "class",
+   "source": "Google Calendar",
+   "detail": "",
+   "url": ""
+  },
+  {
+   "start": "12:00",
+   "end": "12:45",
+   "title": "Lunch with Jordan",
+   "where": "Campus cafe",
+   "kind": "personal",
+   "source": "Google Calendar",
+   "detail": "",
+   "url": ""
+  },
+  {
+   "start": "13:00",
+   "end": "14:15",
+   "title": "CS 1300 Intro to Programming",
+   "where": "Lab, room 104",
+   "kind": "ta",
+   "source": "Google Calendar",
+   "detail": "Lab 9 opens today, so expect questions about nested loops.",
+   "url": ""
+  },
+  {
+   "start": "14:00",
+   "end": "15:00",
+   "title": "Garden club planning call",
+   "where": "Phone",
+   "kind": "meeting",
+   "source": "Google Calendar",
+   "detail": "",
+   "url": ""
+  },
+  {
+   "start": "15:00",
+   "end": "16:00",
+   "title": "CS 1300 office hours",
+   "where": "Lab, room 104",
+   "kind": "ta",
+   "source": "Google Calendar",
+   "detail": "",
+   "url": ""
+  }
+ ],
+ "tomorrow": "Wednesday starts with Maps and Empires at 9, so the response paper has to be done tonight.",
+ "needs_attention": [
+  {
+   "title": "Lab 8 regrade request",
+   "sentence": "A student in section 2 asked for a regrade on question 3 and is waiting on a reply.",
+   "link_phrase": "",
+   "url": ""
+  },
+  {
+   "title": "Garden sensor parts",
+   "sentence": "Sam asked where the moisture probes should ship; the order closes tonight.",
+   "link_phrase": "asked where the moisture probes should ship",
+   "url": "https://example.com/mail/thread/sensor-parts"
+  }
+ ],
+ "resolved": [
+  {
+   "title": "Thursday review session room",
+   "sentence": "The department confirmed the review session stays in room 104.",
+   "link_phrase": "",
+   "url": ""
+  }
+ ],
+ "todoist_schedule": [
+  {
+   "id": "demo-2001",
+   "title": "Return library books",
+   "sentence": "On the way to lunch; two are due Wednesday."
+  },
+  {
+   "id": "demo-2002",
+   "title": "Order seed trays for the garden club",
+   "sentence": "During the planning call, while the list is open."
+  }
+ ],
+ "in_lecture": [
+  {
+   "class": "HIST-2210",
+   "line": "Portolan charts: drawn for sailors, built from compass bearings, empty inland."
+  }
+ ],
+ "projects": [
+  {
+   "title": "Garden sensor calibration",
+   "outcome": "The probe now reads dry soil at 12 percent and wet soil at 41.",
+   "owed": "Pick the alert threshold: 20 or 25 percent.",
+   "source": "session report hd-garden-sensor-calibration"
+  },
+  {
+   "title": "Postcard press captions",
+   "outcome": "Captions wrap cleanly on narrow cards and use the new serif.",
+   "owed": "Choose between the two sample spacings.",
+   "source": "git: postcard-press"
+  }
+ ],
+ "news": [
+  {
+   "headline": "A small open-weight model for on-device summaries",
+   "summary": "A 3B model tuned for summaries, released with weights and a model card.",
+   "why": "Small enough to try on the garden sensor's hub.",
+   "status": "available",
+   "published": "2026-04-13",
+   "source_name": "Example Lab",
+   "url": "https://example.com/lab/small-summary-model"
+  },
+  {
+   "headline": "Agents that ask before they act",
+   "summary": "A preprint on agents that pause for a yes before changing files or sending mail.",
+   "why": "",
+   "status": "research",
+   "published": "2026-04-13",
+   "source_name": "Example Preprints",
+   "url": "https://example.com/preprints/ask-before-act"
+  },
+  {
+   "headline": "Example Runtime 2.4 adds a low-memory mode",
+   "summary": "Faster model loading on laptops and a new low-memory mode.",
+   "why": "",
+   "status": "update",
+   "published": "2026-04-14",
+   "source_name": "Example Runtime",
+   "url": "https://example.com/runtime/releases/v2.4.0"
+  }
+ ],
+ "news_note": "",
+ "movement": "A run fits from 6 to 7 PM, before sunset at 7:36. It should be about 57 and dry.",
+ "weather_line": "",
+ "source_status": [
+  {
+   "source": "Google Calendar",
+   "status": "ok",
+   "note": "6 events today"
+  },
+  {
+   "source": "Gmail",
+   "status": "ok",
+   "note": "4 searches"
+  },
+  {
+   "source": "Todoist",
+   "status": "ok",
+   "note": "2 inbox tasks"
+  },
+  {
+   "source": "Weather",
+   "status": "ok",
+   "note": "invented demo forecast"
+  },
+  {
+   "source": "AI news",
+   "status": "ok",
+   "note": "3 items from 3 feeds"
+  }
+ ],
+ "day_class": "HEAVY"
+}

@@ -1,0 +1,14 @@
+{
+ "note": "invented demo data",
+ "name": "hd-postcard-press-fonts",
+ "task": "Avery asks: swap postcard-press to the open licensed serif and check the print margins",
+ "cwd": "~/projects/postcard-press",
+ "host": "hub",
+ "backend": "claude",
+ "model": "sonnet",
+ "status": "idle",
+ "waiting_for": "",
+ "started_at": 1776173400,
+ "ended_at": 1776175800,
+ "url": ""
+}

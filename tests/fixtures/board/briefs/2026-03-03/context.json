@@ -1,0 +1,15 @@
+{
+ "school": {
+  "date": "2026-03-03",
+  "class_meetings": [{"day": "today", "class": "BIO-2100", "name": "Cell Biology", "role": "student", "time": "2 PM - 3:15 PM", "start": "14:00", "end": "15:15"}],
+  "due_soon": [
+   {"class": "BIO-2100", "title": "Lab report 4", "overdue": false, "sort": "2026-03-05T23:59:00-07:00", "due": "Thu Mar 5, 11:59 PM"},
+   {"class": "BIO-2100", "title": "Quiz 5", "overdue": false, "sort": "2026-03-06T23:59:00-07:00", "due": "Fri Mar 6, 11:59 PM"},
+   {"class": "BIO-2100", "title": "Old reading response", "overdue": true, "sort": "2026-02-26T23:59:00-07:00", "due": "Thu Feb 26"},
+   {"class": "BIO-2100", "title": "Project proposal", "overdue": false, "sort": "2026-03-15T23:59:00-06:00", "due": "Sun Mar 15, 11:59 PM"}
+  ],
+  "to_grade": [{"class": "BIO-1000", "title": "Lab 2 grading", "overdue": false, "sort": "2026-03-04T23:59:00-07:00", "due": "Wed Mar 4", "kind": "grading"}],
+  "todoist_task_ids": ["T1"]
+ },
+ "weather": {"status": "ok", "line": "Clear, 58 / 33"}
+}

@@ -1,0 +1,5 @@
+# invented demo data
+hostname = "tower"
+role = "gpu"
+ip = "192.0.2.12"
+assume_up = false

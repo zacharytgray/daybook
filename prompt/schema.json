@@ -1,0 +1,435 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "headline",
+    "opening",
+    "focus",
+    "next_actions",
+    "events",
+    "tomorrow",
+    "needs_attention",
+    "resolved",
+    "todoist_schedule",
+    "in_lecture",
+    "projects",
+    "news",
+    "news_note",
+    "movement",
+    "weather_line",
+    "source_status",
+    "weekly_clues"
+  ],
+  "properties": {
+    "headline": {
+      "type": "string",
+      "description": "one line under the day name, at most 16 words"
+    },
+    "opening": {
+      "type": "string",
+      "description": "two short sentences, personal, specific to today"
+    },
+    "focus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "why",
+        "when",
+        "source"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "why": {
+          "type": "string"
+        },
+        "when": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "why",
+          "when",
+          "horizon",
+          "kind",
+          "source",
+          "url",
+          "handoff"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "why": {
+            "type": "string"
+          },
+          "when": {
+            "type": "string"
+          },
+          "horizon": {
+            "type": "string",
+            "enum": [
+              "today",
+              "this_week"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "school",
+              "ta",
+              "research",
+              "project",
+              "pr",
+              "email",
+              "task",
+              "personal"
+            ]
+          },
+          "source": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "handoff": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "suggested defaults for handing this to the agent",
+            "required": [
+              "runner",
+              "model",
+              "where",
+              "reach",
+              "prompt"
+            ],
+            "properties": {
+              "runner": {
+                "type": "string",
+                "enum": [
+                  "agent",
+                  "claude",
+                  "codex"
+                ]
+              },
+              "model": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9.:_-]{0,39}$",
+                "description": "\"default\" or a short model id"
+              },
+              "where": {
+                "type": "string",
+                "description": "\"\" or an absolute path inside an allowed root"
+              },
+              "reach": {
+                "type": "string",
+                "enum": [
+                  "draft",
+                  "branch",
+                  "ship"
+                ]
+              },
+              "prompt": {
+                "type": "string",
+                "description": "one or two short plain sentences the agent can start from"
+              }
+            }
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "start",
+          "end",
+          "title",
+          "where",
+          "kind",
+          "source",
+          "detail",
+          "url"
+        ],
+        "properties": {
+          "start": {
+            "type": "string",
+            "description": "HH:MM 24h local, empty for all-day"
+          },
+          "end": {
+            "type": "string",
+            "description": "HH:MM 24h local, empty for all-day"
+          },
+          "title": {
+            "type": "string"
+          },
+          "where": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "class",
+              "ta",
+              "meeting",
+              "personal",
+              "deadline",
+              "other"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "Google Calendar"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tomorrow": {
+      "type": "string"
+    },
+    "needs_attention": {
+      "$ref": "#/$defs/items"
+    },
+    "resolved": {
+      "$ref": "#/$defs/items"
+    },
+    "todoist_schedule": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "sentence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "the Todoist task id"
+          },
+          "title": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "in_lecture": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "class",
+          "line"
+        ],
+        "properties": {
+          "class": {
+            "type": "string"
+          },
+          "line": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "outcome",
+          "owed",
+          "source"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "string"
+          },
+          "owed": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "news": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "headline",
+          "summary",
+          "why",
+          "status",
+          "published",
+          "source_name",
+          "url"
+        ],
+        "properties": {
+          "headline": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "why": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "available",
+              "announced",
+              "research",
+              "rumor",
+              "update"
+            ]
+          },
+          "published": {
+            "type": "string",
+            "description": "YYYY-MM-DD as stated on the source page"
+          },
+          "source_name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "news_note": {
+      "type": "string"
+    },
+    "movement": {
+      "type": "string"
+    },
+    "weather_line": {
+      "type": "string",
+      "description": "only when WEATHER was unavailable, e.g. 'Sunny, 81 / 58'; else empty"
+    },
+    "source_status": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "status",
+          "note"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": [
+              "Google Calendar",
+              "Gmail",
+              "Todoist",
+              "Weather",
+              "AI news"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "partial",
+              "unavailable",
+              "off"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "weekly_clues": {
+      "type": "array",
+      "maxItems": 40,
+      "description": "empty unless WEEKLY_CROSSWORD lists answers",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "answer",
+          "clue"
+        ],
+        "properties": {
+          "answer": {
+            "type": "string"
+          },
+          "clue": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "sentence",
+          "link_phrase",
+          "url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "string"
+          },
+          "link_phrase": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
